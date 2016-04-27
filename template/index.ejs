@@ -1,0 +1,149 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Home</title>
+</head>
+<style>
+    body
+    {
+        font-family: Book Antiqua, Helvetica, sans-serif;
+        margin: 0px;
+        padding: 0px;
+    }
+    .high
+    {
+        width: 100%;
+        height: 90px;
+        background: #4870ff;
+        position: relative;
+        vertical-align: top;
+    }
+    .menu
+    {
+        width:99.82%;
+        position: absolute;
+        padding: 0px;
+        margin: 0px;
+        height: 40px;
+        background: rgb(50,49,48);
+        font-weight: bold;
+        z-index: 100;
+        font-size: 30px;
+        left: 0;
+        border: 1px solid rgba(0,0,0,.1);
+    }
+    .news {
+        position: absolute;
+        margin: 50px 30% 0 30%;
+        top: 132px;
+        text-align: center;
+        border-radius:15px;
+        background-color: #9ea59c;
+    }
+    #search-block-form{
+        width:248px;
+        height:33px;
+        float:right;
+        border-radius:15px;
+        border:#c9c9c9 solid 1px;
+        background: left top repeat-x;
+    }
+    #search-block-form input{
+        padding:0;
+        margin:0;
+        display:block;
+        border:none;
+        outline:none;
+        background:none;
+        width:100%;
+        height:100%;
+    }
+    #search-block-form .form-actions{
+        width:28px;
+        height:28px;
+        float:left;
+        background: 5px 2px no-repeat;
+    }
+    #search-block-form .form-actions input{
+        overflow:hidden;
+        text-indent:-9999px;
+    }
+    #search-block-form .form-item{
+        width:210px;
+        padding:0px 5px;
+        float:right;
+        height:28px;
+    }
+    #search-block-form .form-item input{
+        font:13px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+        color:white;
+        height:auto !important;
+        padding:6px 0;
+    }
+    .footer
+    {
+        border-top: 1px solid #aaaaaa;
+        position: relative;
+        height: 40px;
+        background: #4870ff;
+    }
+    a {
+        color: #fffbff;
+        text-decoration: none;
+    }
+    .news a
+    {
+        color: #4870ff;
+    }
+    .news p
+    {
+        font-family: Buxton Sketch, Helvetica, sans-serif;
+        color: green;
+        font-size: 20px;
+    }
+    h1
+    {
+        font-family: Monotype Corsiva, Helvetica, sans-serif;
+        text-align:center;
+        color: white;
+        font-size: 100px;
+        line-height: 80%;
+    }
+    h2
+    {
+        font-family: Monotype Corsiva, Helvetica, sans-serif;
+        text-align:left;
+        color: black;
+    }
+</style>
+
+<body>
+
+<div class="high">
+    <h1>Comics Industry News</h1>
+</div>
+
+<div class="menu">
+    <a href="#">Главная</a>
+    <form method="post" id="search-block-form">
+        <div class="form-item">
+            <input type="text" maxlength="128" placeholder="Найти...">
+        </div>
+        <div class="form-actions">
+            <input type="submit" name="op" value="Поиск" class="form-submit">
+        </div>
+    </form>
+</div>
+<div class="news">
+    <p>Latest News</p>
+    <% body.forEach(function (elem){ %>
+    <a href="<%- elem.aBoomLink %>"><div><%- elem.aBoomTitle %></div></a>
+    <a href="<%- elem.bLink %>"><div><%- elem.bTitle %></div></a>
+    <% }) %>
+</div>
+
+<div class="footer">
+</div>
+
+</body>
+</html>
