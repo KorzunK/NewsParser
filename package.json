@@ -1,0 +1,20 @@
+{
+  "name": "NewsParser",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "jscs-fix": "jscs --fix app.js parser.js server.js config/index.js routes/index.js"
+  },
+  "dependencies": {
+    "express": "4.13.4",
+    "ejs": "2.4.1",
+    "nconf":"0.8.4",
+    "request":"2.69.0",
+    "cheerio":"0.20.0",
+    "serve-favicon":"2.3.0"
+  },
+  "devDependencies":{
+    "jscs":"^2.11.0"
+  }
+}
