@@ -1,0 +1,113 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Комиксы</title>
+</head>
+<style>
+    body
+    {
+        font-family: Book Antiqua, Helvetica, sans-serif;
+        background-color: #FAAC58;
+        margin: 0px;
+        padding: 0px;
+    }
+    .high
+    {
+        width: 100%;
+        height: 90px;
+        background: #4870ff;
+        position: relative;
+        vertical-align: top;
+    }
+    .menu
+    {
+        width:99.82%;
+        position: relative;
+        padding: 0px;
+        margin: 0px;
+        height: 40px;
+        background: rgb(50,49,48);
+        font-weight: bold;
+        z-index: 100;
+        font-size: 30px;
+        left: 0;
+        border: 1px solid rgba(0,0,0,.1);
+    }
+    .inscription
+    {
+        position: relative;
+        margin: 0px 25% 0 28%;
+        text-align: center;
+        border-radius: 15px;
+        background-color: #E6E6E6;
+    }
+    .news
+    {
+        position: relative;
+        margin: 0px 25% 0 28%;
+        text-align: center;
+        border-radius: 15px;
+        background-color: #E6E6E6;
+    }
+    .footer
+    {
+        border-top: 1px solid #aaaaaa;
+        position: relative;
+        height: 40px;
+        background: #4870ff;
+    }
+    a
+    {
+        color: #fffbff;
+        text-decoration: none;
+    }
+    .news a
+    {
+        color: #4870ff;
+    }
+    .inscription p
+    {
+        font-family: Georgia, serif;
+        color: #AC58FA;
+        font-size: 40px;
+    }
+    h1
+    {
+        font-family: Monotype Corsiva, sans-serif;
+        text-align:center;
+        color: white;
+        font-size: 100px;
+        line-height: 80%;
+    }
+</style>
+
+<body>
+
+<div class="high">
+    <h1>Comics Industry News</h1>
+</div>
+
+<div class="menu">
+    <a href="/main">Главная</a>
+    <a href="/news">Статьи</a>
+    <a href="/serials">Сериалы</a>
+    <a href="#">Комиксы</a>
+</div>
+
+<div class="inscription">
+    <p>Комикс новинки</p>
+</div>
+
+<div class="news">
+    <% body.forEach(function (elem){ %>
+    <a href="http://spidermedia.ru/<%- elem.comLink %>" ><div><%- elem.comTitle %> |<%- elem.comDate %></div></a>
+    <h6><%- elem.comTXT %></h6>
+    <hr noshade size="10">
+    <% }) %>
+</div>
+
+<div class="footer">
+</div>
+
+</body>
+</html>
