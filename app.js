@@ -16,7 +16,7 @@ app.use(function (req, res, next) {
 
 app.use(function (err, req, res, next) {
     res.status(err.status || 500);
-    res.render('error', {body: '<b>404: Not Found</b>',
+    res.render('error', {
         error: err.status, message: err.message
     });
 });
